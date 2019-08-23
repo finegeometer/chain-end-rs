@@ -1,4 +1,5 @@
 /// One end of a chain of values.
+#[must_use = "If a chain end is dropped, the chain is leaked."]
 pub struct ChainEnd<T>(*mut Node<T>);
 
 struct Node<T> {
